@@ -10,6 +10,7 @@ A small carrier PCB that joins an nRF52840 "supermini" (Nice!Nano clone) to a Se
 |---|---|
 | `nepamesh_lorasupermini.kicad_*` | KiCad 9 project: 2 layers, 32 x 55.5 mm |
 | `lib/` | Project symbols and footprints (supermini, Wio-SX1262) |
+| `gerbers/` | Gerber and drill files for JLCPCB (regenerated with the NEPAMesh LoraSupermini silkscreen and front logos; not fabricated in this form yet) |
 | `tools/build.py` | Generates the KiCad project from code.  Edit the script, not the generated files |
 | `tools/fill.py`, `tools/logo.py` | Zone fill and logo tracing |
 | `case/build_case.py` | build123d script for the two-part case (62.2 x 87.8 mm).  Outputs in `case/out/` as STL |
@@ -17,7 +18,6 @@ A small carrier PCB that joins an nRF52840 "supermini" (Nice!Nano clone) to a Se
 | `firmware/meshcore/` | MeshCore variant: repeater, room server, USB and BLE companion |
 | `firmware/flash.sh` | Serial DFU flashing helper |
 
-Gerbers are not included yet.
 
 ## Hardware summary
 
@@ -42,7 +42,7 @@ Read before you flash:
 
 - Supermini hole drill and outline were assumed from photos and a datasheet.  Measure the real board before ordering more.
 - The supermini VCC pin has not been checked against 125 mA transmit bursts.
-- The first boards are silkscreened with the working name "meschoresupermini".
+- The first five boards were fabricated with the working name "meschoresupermini" on the silkscreen.  The files here use the new name and add two small NEPAMesh logos on the front.  The finest logo strokes are thinner than JLCPCB's usual 0.15 mm silkscreen minimum, so expect fuzzy detail.
 
 ## License
 
