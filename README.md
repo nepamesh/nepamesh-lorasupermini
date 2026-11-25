@@ -11,6 +11,7 @@ A small carrier PCB that joins an nRF52840 "supermini" (Nice!Nano clone) to a Se
 | `nepamesh_lorasupermini.kicad_*` | KiCad 9 project: 2 layers, 32 x 55.5 mm |
 | `lib/` | Project symbols and footprints (supermini, Wio-SX1262) |
 | `gerbers/` | Gerber and drill files for JLCPCB (regenerated with the NEPAMesh LoraSupermini silkscreen and front logos; not fabricated in this form yet) |
+| `3d/` | GLB models for viewers like [F3D](https://f3d.app): `nepamesh_lorasupermini.glb` is the bare board, `..._assembled.glb` adds approximate component bodies.  Regenerate with `tools/build_3d.py` |
 | `tools/build.py` | Generates the KiCad project from code.  Edit the script, not the generated files |
 | `tools/fill.py`, `tools/logo.py` | Zone fill and logo tracing |
 | `case/build_case.py` | build123d script for the two-part case (62.2 x 87.8 mm).  Outputs in `case/out/` as STL |
