@@ -2,7 +2,7 @@
 
 A small carrier PCB that joins an nRF52840 "supermini" (Nice!Nano clone) to a Seeed Wio-SX1262 LoRa module, with an off-board 18650 cell and a 3D-printable case.  Core parts come to about $10 per node.  Part of the [NEPAMesh](https://nepamesh.com) community Meshtastic network.
 
-**Status: v0.1, early.**  Boards are fabricated and one is partly assembled.  The firmware builds but has not been run on hardware, and the case has not been sliced or printed.  Treat everything here as untested.
+**Status: v0.1, early.**  Boards are fabricated and one is partly assembled.  The Meshtastic variant is flashed on the first board, which sends and receives messages.  The MeshCore variants build but have not been flashed, and the case has not been sliced or printed.  Range has not been tested.
 
 ## What is in this repo
 
@@ -27,7 +27,7 @@ A small carrier PCB that joins an nRF52840 "supermini" (Nice!Nano clone) to a Se
 
 ## Firmware
 
-Build the Meshtastic variant by copying `firmware/meshtastic/variants/nrf52840/diy/nepamesh_lorasupermini` into a checkout of [meshtastic/firmware](https://github.com/meshtastic/firmware) and running `pio run -e nepamesh_lorasupermini`.  The MeshCore variant goes into `variants/` of a checkout of [meshcore-dev/MeshCore](https://github.com/meshcore-dev/MeshCore).  Tested against Meshtastic 2.8.3 and MeshCore commit 75b04ef, builds only.
+Build the Meshtastic variant by copying `firmware/meshtastic/variants/nrf52840/diy/nepamesh_lorasupermini` into a checkout of [meshtastic/firmware](https://github.com/meshtastic/firmware) and running `pio run -e nepamesh_lorasupermini`.  The MeshCore variant goes into `variants/` of a checkout of [meshcore-dev/MeshCore](https://github.com/meshcore-dev/MeshCore).  Meshtastic 2.8.3 is built and running on hardware.  MeshCore commit 75b04ef builds only and has not been flashed.
 
 Flash by double-tapping RST to GND so the bootloader drive appears, then copy the `.uf2` or use `firmware/flash.sh`.
 

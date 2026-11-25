@@ -44,4 +44,4 @@ TCXO: DIO3 at 1.8 V. LED P0.15.
 - No button, GPS or I2C on the PCB. The variant puts them on spare pins (button P1.00, I2C SDA P0.17 / SCL P0.11,
   GPS TX P0.20 / RX P0.22 / EN P0.24, Serial2 P0.06 / P0.08) for bodge wiring.
 - Hardware model reports as PRIVATE_HW.
-- Untested on hardware.
+- Flashed on one assembled board (Meshtastic 2.8.3): it sends and receives messages.  Range, battery and the bodge-wired extras are untested.
